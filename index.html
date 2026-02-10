@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentPing — AI Finish Alerts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FDFBF7;
+      --ink: #2C2825;
+      --red: #C03028;
+      --red-hover: #A82820;
+      --muted: #8A847B;
+      --almond: #F3F0E6;
+      --border: rgba(44, 40, 37, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .hero-logo {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 2.4rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .cta-primary {
+      background: var(--red);
+      color: white;
+    }
+
+    .cta-primary:hover {
+      background: var(--red-hover);
+    }
+
+    .cta-secondary {
+      background: var(--almond);
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+
+    .cta-secondary:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* Platforms */
+    .platforms {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .platforms span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 48px;
+    }
+
+    .section h2 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    .section p, .section li {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .section li {
+      margin: 6px 0;
+    }
+
+    /* Feature grid */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 500px) {
+      .features { grid-template-columns: 1fr; }
+    }
+
+    .feature-card {
+      background: var(--almond);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .feature-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: var(--red);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <svg viewBox="0 0 200 200" class="hero-logo">
+        <path d="M100,30 C145,30 175,65 170,100 C165,145 135,170 100,170 C60,170 35,140 30,100 C25,55 60,30 100,30 Z" fill="#C03028" />
+      </svg>
+      <h1>AgentPing</h1>
+      <p>Sound alerts and notifications when your AI finishes generating. Stop staring at tabs.</p>
+
+      <div class="cta-row">
+        <a href="#" class="cta cta-primary">Install from Chrome Web Store</a>
+        <a href="https://github.com/AkashiGhost/agentping/issues" class="cta cta-secondary">Report a Bug</a>
+      </div>
+
+      <div class="platforms">
+        <span>ChatGPT</span>
+        <span>Claude</span>
+        <span>Gemini</span>
+        <span>Perplexity</span>
+        <span>DeepSeek</span>
+        <span>Grok</span>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="section">
+      <h2>How It Works</h2>
+      <p>Install the extension. Refresh your AI tabs. A small red bell appears on each page.</p>
+      <p>Send a prompt and switch away. AgentPing watches for the AI to finish and pings you with a sound and desktop notification.</p>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>5 Sounds</h3>
+          <p>Gentle Chime, Three-Note, Warm Bell, Soft Hum, Sharp Ping. Pick your favorite.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Phone Alerts</h3>
+          <p>Get push notifications on your phone via ntfy.sh. Free, no account needed.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multi-Tab</h3>
+          <p>Monitors all your AI tabs at once. See which are running or done in the popup.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Zero Data</h3>
+          <p>No analytics. No tracking. No servers. Everything stays on your device.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone alerts -->
+    <div class="section">
+      <h2>Phone Alerts Setup</h2>
+      <p>For notifications when your screen is off:</p>
+      <ul>
+        <li>Install the <a href="https://ntfy.sh" style="color: var(--red);">ntfy app</a> on your phone</li>
+        <li>Subscribe to a topic name (e.g., <code>my-agentping-alerts</code>)</li>
+        <li>Enter the same topic in AgentPing's popup</li>
+        <li>Test with the "Test Phone Alert" button</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>&copy; 2026 AgentPing</span>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="https://github.com/AkashiGhost/agentping/issues">Report a Bug</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

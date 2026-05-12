@@ -1,6 +1,6 @@
 # AgentPing
 
-Sound alerts and desktop notifications when your AI finishes generating. Works with ChatGPT, Claude, Gemini, Perplexity, DeepSeek, and Grok.
+Sound alerts and desktop notifications when your AI finishes generating.
 
 ## The Problem
 
@@ -12,7 +12,7 @@ AgentPing watches your AI tabs and pings you the moment they're done.
 
 Get it from the [Chrome Web Store](#) (link coming soon).
 
-Works on Chrome, Edge, Brave, Opera, Vivaldi, and Arc.
+Built for supported Chromium-based browsers.
 
 ## Features
 
@@ -29,9 +29,9 @@ Works on Chrome, Edge, Brave, Opera, Vivaldi, and Arc.
 - Click the bell or press Escape to dismiss
 
 **Privacy**
-- Collects zero data. No analytics, no tracking, no servers.
+- No analytics, no tracking, no developer servers.
 - All settings stored locally on your device.
-- Never reads your conversations.
+- Processes only the local page signals needed to detect when a response finishes.
 - [Privacy Policy](privacy-policy.html)
 
 ## How to Use
@@ -55,7 +55,7 @@ For notifications when your screen is off or computer is asleep:
 3. Enter the same topic name in AgentPing's popup
 4. Test it with the "Test Phone Alert" button
 
-Free, no account needed. The notification contains only the platform name and tab title — never your conversation.
+Free, no account needed. The notification contains only the platform name and a generic completion notice.
 
 ## Report a Bug
 

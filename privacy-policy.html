@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgentPing — Privacy Policy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #FDFBF7;
@@ -46,46 +43,46 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="date">Last updated: February 2026</p>
+  <p class="date">Last updated: May 2026</p>
 
   <h2>What AgentPing Does</h2>
-  <p>AgentPing monitors AI chat tabs (ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok) to detect when they finish generating a response, then alerts you with a sound and notification.</p>
+  <p>AgentPing monitors supported AI chat tabs to detect when a response starts and finishes, then alerts you with a sound, desktop notification, and optional phone notification.</p>
 
-  <h2>Data We Collect</h2>
-  <p><strong>None.</strong> AgentPing does not collect, store, or transmit any personal data. Specifically:</p>
+  <h2>Data AgentPing Handles</h2>
+  <p>AgentPing does not collect data on developer servers and does not use analytics, advertising, or tracking. To provide alerts, the extension processes limited data on your device:</p>
   <ul>
-    <li>We do not read your AI conversations or prompts</li>
-    <li>We do not track your browsing history</li>
-    <li>We do not send any data to our servers</li>
-    <li>We have no analytics, telemetry, or tracking</li>
+    <li><strong>Website content signals</strong>: Local page indicators such as stop buttons, loading states, and response text-length changes on supported AI sites. AgentPing does not save prompts or responses.</li>
+    <li><strong>Web history for supported AI tabs</strong>: The tab title, platform name, tab ID, and alert state needed to show active tabs and local desktop alerts.</li>
+    <li><strong>Settings</strong>: Your sound, volume, platform toggles, phone-alert topic, and bell position.</li>
   </ul>
 
   <h2>Data Stored Locally</h2>
-  <p>AgentPing stores the following data <strong>only on your device</strong> using Chrome's built-in storage:</p>
+  <p>AgentPing stores settings and current tab alert states <strong>only on your device</strong> using Chrome's built-in storage and page-local storage. Tab states are cleared when the browser session ends.</p>
+
+  <h2>Data We Do Not Use</h2>
   <ul>
-    <li><strong>Settings</strong>: Your volume, sound choice, and platform toggles</li>
-    <li><strong>Tab states</strong>: Which AI tabs are running/completed (cleared when browser closes)</li>
-    <li><strong>Bell position</strong>: Where you dragged the bell button on each site</li>
+    <li>We do not sell user data.</li>
+    <li>We do not use user data for advertising, creditworthiness, or unrelated purposes.</li>
+    <li>We do not allow humans to read your AI conversations.</li>
+    <li>We do not send prompts, responses, or conversation content to developer servers.</li>
   </ul>
-  <p>This data never leaves your device.</p>
 
   <h2>Phone Alerts (Optional)</h2>
-  <p>If you enable phone alerts, AgentPing sends a short notification message to <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy.sh</a> (a free, open-source push service). The message contains only the AI platform name and tab title — no conversation content. This is entirely optional and off by default.</p>
+  <p>If you enable phone alerts, AgentPing sends a short notification message to <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy.sh</a>. The message contains only the AI platform name and a generic completion notice. Phone alerts are optional and off by default.</p>
 
   <h2>Permissions Explained</h2>
   <ul>
-    <li><strong>tabs</strong>: To detect which AI tabs are open and show them in the popup</li>
+    <li><strong>Host permissions</strong>: To run completion detection only on supported AI sites and to send optional phone alerts through ntfy.sh.</li>
     <li><strong>notifications</strong>: To show desktop alerts when AI finishes</li>
     <li><strong>storage</strong>: To save your settings locally</li>
-    <li><strong>activeTab</strong>: To interact with the current tab</li>
     <li><strong>offscreen</strong>: To play notification sounds in the background</li>
   </ul>
 
   <h2>Third-Party Services</h2>
-  <p>AgentPing connects to Google Fonts to load the Fraunces and Outfit typefaces in the popup. No other external services are used unless you opt into phone alerts (ntfy.sh).</p>
+  <p>No third-party service is contacted by AgentPing unless you opt into phone alerts through ntfy.sh.</p>
 
   <h2>Changes</h2>
-  <p>If this policy changes, we'll update the date above. Since we collect no data, changes would only reflect new features.</p>
+  <p>If this policy changes, we'll update the date above.</p>
 
   <h2>Contact</h2>
   <p>Questions or bugs? <a href="https://github.com/AkashiGhost/agentping/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</p>
